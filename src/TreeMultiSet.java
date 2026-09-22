@@ -10,7 +10,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     void add(int item) {
-
+        root.insert(item);
     }
 
     /**
@@ -21,7 +21,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     void remove(int item) {
-
+        root.deleteItem(item);
     }
 
     /**
@@ -32,7 +32,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     boolean contains(int item) {
-        return false;
+        return root.contains(item);
     }
 
     /**
@@ -40,7 +40,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     boolean isEmpty() {
-        return false;
+        return root.isEmpty();
     }
 
     /**
@@ -51,7 +51,7 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     int count(int item) {
-        return -1;
+        return root.count(item);
     }
 
     /**
@@ -59,6 +59,6 @@ public class TreeMultiSet extends MultiSet {
      */
     @Override
     int size() {
-        return -1;
+        return root.getSize();
     }
 }
